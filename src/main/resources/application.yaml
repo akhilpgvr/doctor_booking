@@ -1,0 +1,24 @@
+server:
+  port: 8002
+  servlet:
+    context path: "/doc-booking/v1"
+
+spring:
+  application:
+    name: doctor_booking
+  mvc:
+    path match:
+      matching-strategy: ant-path-matcher
+
+  data:
+    mongodb:
+      user: admin
+      password: admin
+      database: medicus-connect
+      uri: mongodb://localhost:27017
+
+  config:
+    rest:
+      service:
+        user-url: "http://localhost:9990/user/mgmt/v1"
+        bus-url: "http://localhost:9991/bus/mgmt/v1"
